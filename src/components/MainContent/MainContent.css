@@ -1,0 +1,80 @@
+.mainContent {
+    width: 100%;
+    background-color: rgb(218, 229, 245);
+    position: relative;
+}
+
+.mainContent_Empty{
+    width: 100%;
+    background-color: rgb(218, 229, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mainContent_Empty p{
+    max-width: 650px;
+    font-size: 20px;
+}
+
+.group_meta_data {
+    height: 98px;
+    background-color: rgb(0, 30, 140);
+    display: flex
+}
+
+.noteItem_wrapper{
+    height: 100dvh;
+    overflow: scroll;
+}
+
+.meta_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    color: aliceblue;
+}
+
+.group_meta_data_initials {
+    width: 68.9px;
+    height: 68.9px;
+    border-radius: 50%;
+    background-color: aqua;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editor {
+    box-sizing: border-box;
+    height: 225px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border: 30px solid blue;
+    border-bottom-left-radius: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: #9A9A9A;
+    letter-spacing: 2%;
+}
+
+.add_notes_btn{
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    font-size: x-large;
+    color: blue;
+    cursor: pointer;
+}
+
+.add_notes_btn:hover{
+    transform: scale(150%);
+}
+
+.add_notes_btn:active{
+    transform: scale(120%);
+}

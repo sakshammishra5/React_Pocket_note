@@ -1,0 +1,30 @@
+.note_Item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 280px;
+}
+
+.note_Item:hover{
+background-color: gray;
+cursor: pointer;
+border-radius: 16px;
+}
+.note_Item.active{
+    background-color: rgb(219, 219, 219);
+    border-radius: 10px;
+}
+.note_Item_initials {
+    background-color: aqua;
+    border-radius: 50%;
+    width: 68px;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    width: 106px;
+    height: 28px;
+}

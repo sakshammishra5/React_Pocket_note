@@ -1,0 +1,20 @@
+.note_item_Container{
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: aliceblue;
+    color: #353535;
+}
+
+
+
+.note_item_Container p{
+    word-break: break-all;
+}
+
+.time_container{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 10px;
+    color: #000000;
+}

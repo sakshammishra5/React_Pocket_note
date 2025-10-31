@@ -1,0 +1,30 @@
+.side_bar {
+    width: 430px;
+    height: 100dvh;
+    position: relative;
+}
+
+
+.side_bar>h1{
+    font-size: 35px;
+    letter-spacing: 2%;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+
+
+.noteItem_container {
+    overflow-y: hidden;
+    overflow-y: scroll;
+    height: 100dvh;
+}
+
+.add_notes{
+    position: absolute;
+    bottom: 60px;
+    right: 30px;
+    font-size: 50px;
+    color: blue;
+    cursor: pointer;
+}
+
