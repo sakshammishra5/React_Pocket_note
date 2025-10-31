@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import GroupItem from '../GroupItem/GroupItem'
-import "./SideBar.css"
+import "./Sidebar.css"
 import { FaCirclePlus } from "react-icons/fa6";
 import { noteContext } from '../../App';
 
