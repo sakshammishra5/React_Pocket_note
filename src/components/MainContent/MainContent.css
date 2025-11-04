@@ -1,7 +1,11 @@
 .mainContent {
     width: 100%;
-    background-color: rgb(218, 229, 245);
+    background-color: #DAE5F5;
     position: relative;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .mainContent_Empty{
@@ -10,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    height: 100dvh;
 }
 
 .mainContent_Empty p{
@@ -19,62 +23,180 @@
 }
 
 .group_meta_data {
-    height: 98px;
-    background-color: rgb(0, 30, 140);
-    display: flex
+    height: 80px;
+    background-color: #001F3F;
+    display: flex;
+    border-bottom: none;
+    flex-shrink: 0;
 }
 
 .noteItem_wrapper{
-    height: 100dvh;
-    overflow: scroll;
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 16px;
+    background-color: #DAE5F5;
+    padding-bottom: 100px;
+}
+
+.empty_notes_state {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .meta_wrapper {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 12px;
-    color: aliceblue;
+    gap: 16px;
+    padding: 16px 20px;
+    width: 100%;
+}
+
+.back_button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+}
+
+.back_button:hover {
+    opacity: 0.7;
 }
 
 .group_meta_data_initials {
-    width: 68.9px;
-    height: 68.9px;
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
     border-radius: 50%;
-    background-color: aqua;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.group_name_text {
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    flex: 1;
+}
+
+.note_input_form {
+    position: relative;
+    padding: 16px;
+    background-color: #FFFFFF;
+    border-top: 2px solid #001F3F;
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    flex-shrink: 0;
 }
 
 .editor {
     box-sizing: border-box;
-    height: 225px;
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    border: 30px solid blue;
-    border-bottom-left-radius: 10px;
-    padding: 10px;
-    font-size: 30px;
+    min-height: 50px;
+    max-height: 150px;
+    border: none;
+    border-radius: 22px;
+    padding: 12px 16px;
+    font-size: 16px;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    resize: none;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.editor:focus {
+    outline: none;
+}
+
+.editor::placeholder {
     color: #9A9A9A;
-    letter-spacing: 2%;
 }
 
 .add_notes_btn{
-    position: absolute;
-    bottom: 30px;
-    right: 50px;
-    font-size: x-large;
-    color: blue;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #FF0000;
     cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.2s;
 }
 
 .add_notes_btn:hover{
-    transform: scale(150%);
+    transform: scale(1.1);
 }
 
 .add_notes_btn:active{
-    transform: scale(120%);
+    transform: scale(0.95);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .group_meta_data {
+        height: 70px;
+    }
+    
+    .meta_wrapper {
+        padding: 12px 16px;
+        gap: 12px;
+    }
+    
+    .back_button {
+        font-size: 20px;
+        padding: 4px;
+        color: #FFFFFF;
+    }
+    
+    .group_meta_data_initials {
+        width: 56px;
+        height: 56px;
+        min-width: 56px;
+        font-size: 20px;
+    }
+    
+    .group_name_text {
+        font-size: 18px;
+        color: #FFFFFF;
+    }
+    
+    .noteItem_wrapper {
+        padding: 16px 12px;
+        padding-bottom: 90px;
+        background-color: #DAE5F5;
+    }
+    
+    .note_input_form {
+        padding: 12px;
+        border-top: 2px solid #001F3F;
+    }
+    
+    .editor {
+        font-size: 14px;
+        padding: 10px 14px;
+        min-height: 44px;
+    }
+    
+    .add_notes_btn {
+        font-size: 24px;
+        padding: 6px;
+        color: #FF0000;
+    }
 }

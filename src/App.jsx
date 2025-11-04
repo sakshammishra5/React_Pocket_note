@@ -6,7 +6,7 @@ import "./App.css"
 export const noteContext = createContext(null);
 const App = () => {
   const [allGroup,setAllGroup]=useState(JSON.parse(localStorage.getItem("allGroup"))||[])
-  const [selectedGroupId, setSelectedGroupId] = useState(1);
+  const [selectedGroupId, setSelectedGroupId] = useState(null);
   const [isModalOpen,setIsModalOpen]=useState(false);
   const noteContextObj={
     isModalOpen,

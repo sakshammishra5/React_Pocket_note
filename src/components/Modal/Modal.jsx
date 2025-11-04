@@ -7,7 +7,14 @@ import { saveInLocal } from '../../utils/util';
 
 const Modal = ({ children }) => {
     const { isModalOpen, setIsModalOpen, allGroup, setAllGroup } = useContext(noteContext);
-    const [colorArray, setColorArray] = useState(["red", "green", "blue", "yellow"])
+    const [colorArray, setColorArray] = useState([
+        "#B38BFA", // Purple
+        "#FF79F2", // Pink
+        "#43E6FC", // Light Blue
+        "#F19576", // Orange
+        "#0047FF", // Blue
+        "#6691FF"  // Light Blue variant
+    ])
     const [selectedColor, setSelectedColor] = useState(null);
     const [groupString, setGroupString] = useState('')
 
@@ -68,9 +75,9 @@ const Modal = ({ children }) => {
                         onChange={(e) => setGroupString(e.target.value)}
                         type="text"
                         id='group_name'
-                        placeholder='Enter group Name'
+                        placeholder='Enter group name'
                         value={groupString}
-                    /><br />
+                    />
                     <div className='choose_color'>
                         <label htmlFor="color">Choose color</label>
                         <div className='color_parent' >
